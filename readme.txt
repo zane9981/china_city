@@ -1,0 +1,4 @@
+中国城市列表,
+先把sql导入数据库
+然后用php 执行 generate.php生成对应的json
+后续可以根据修改generate.php生成自己要的数据
