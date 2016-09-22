@@ -51,6 +51,7 @@ foreach ($objs as $sheng => $v1){
 						}
 						*/
 						$zone2city[$zone] = rtrim($shi,'');
+            $zone2province[$zone] = rtrim($sheng,'');
 			
 						$city2zone[$sheng][$shi] = $zone;
 						$zone2xy[$zone]['x'] = $xy['x'];
@@ -60,8 +61,8 @@ foreach ($objs as $sheng => $v1){
 }
 
 file_put_contents("./zone2city.json", json_encode($zone2city,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+file_put_contents("./zone2province.json", json_encode($zone2province,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 file_put_contents("./city2zone.json", json_encode($city2zone,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 file_put_contents("./zone2xy.json", json_encode($zone2xy,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
-
 $mysqli->close();
 
